@@ -30,15 +30,15 @@
     var CONFIG = {"hostname":"wingsfly.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前置操作 已将代理设置为”System Proxy” 打开Copilot依然显示登录界面，且单击无应答 推测还访问其他服务地址以检查计算机IP的归属地  需手动加入Proxy的IP地址点击Clash对应Profiles的Edit Rules，如下添加并保存： 1213.107.21.0&#x2F;24      IP-CIDR162.159.36.0&#x2F;24     IP-CIDR">
+  <meta name="description" content="前置操作 已将代理设置为”System Proxy” 打开Copilot依然显示登录界面，且单击无应答 推测还访问其他服务地址以检查计算机IP的归属地">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows Copilot IP配置">
 <meta property="og:url" content="http://wingsfly.github.io/2024/08/15/Windows-Copilot-IP%E9%85%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="技术随记">
-<meta property="og:description" content="前置操作 已将代理设置为”System Proxy” 打开Copilot依然显示登录界面，且单击无应答 推测还访问其他服务地址以检查计算机IP的归属地  需手动加入Proxy的IP地址点击Clash对应Profiles的Edit Rules，如下添加并保存： 1213.107.21.0&#x2F;24      IP-CIDR162.159.36.0&#x2F;24     IP-CIDR">
+<meta property="og:description" content="前置操作 已将代理设置为”System Proxy” 打开Copilot依然显示登录界面，且单击无应答 推测还访问其他服务地址以检查计算机IP的归属地">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-15T01:47:14.000Z">
-<meta property="article:modified_time" content="2024-08-15T01:57:35.641Z">
+<meta property="article:modified_time" content="2024-11-07T03:18:49.647Z">
 <meta property="article:author" content="wingsfly">
 <meta name="twitter:card" content="summary">
 
@@ -95,7 +95,9 @@
   </style>
 </noscript>
 
-</head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --></head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
@@ -201,10 +203,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-08-15 09:47:14 / 修改时间：09:57:35" itemprop="dateCreated datePublished" datetime="2024-08-15T09:47:14+08:00">2024-08-15</time>
+              <time title="创建时间：2024-08-15 09:47:14" itemprop="dateCreated datePublished" datetime="2024-08-15T09:47:14+08:00">2024-08-15</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-11-07 11:18:49" itemprop="dateModified" datetime="2024-11-07T11:18:49+08:00">2024-11-07</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -231,6 +239,7 @@
 <li>打开Copilot依然显示登录界面，且单击无应答</li>
 <li>推测还访问其他服务地址以检查计算机IP的归属地</li>
 </ul>
+<span id="more"></span>
 <h1 id="需手动加入Proxy的IP地址"><a href="#需手动加入Proxy的IP地址" class="headerlink" title="需手动加入Proxy的IP地址"></a>需手动加入Proxy的IP地址</h1><p>点击Clash对应Profiles的<code>Edit Rules</code>，如下添加并保存：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">13.107.21.0/24      IP-CIDR</span><br><span class="line">162.159.36.0/24     IP-CIDR</span><br></pre></td></tr></table></figure>
 
@@ -248,11 +257,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2024/08/14/hello-world/" rel="prev" title="Hello World">
-      <i class="fa fa-chevron-left"></i> Hello World
-    </a></div>
       <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2024/11/07/hexo-manual/" rel="next" title="hexo基础操作">
+      hexo基础操作 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -325,15 +334,21 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
@@ -414,6 +429,8 @@
 
 
 
+
+  
 
   
 

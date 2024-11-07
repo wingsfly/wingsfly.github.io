@@ -30,28 +30,32 @@
     var CONFIG = {"hostname":"wingsfly.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="技术随记">
-<meta property="og:url" content="http://wingsfly.github.io/index.html">
+  <meta name="description" content="笔记  智能范畴Artificial Intelligence, AI各种模拟智能体行为的系统 Machine Learning基于数学模型来拟合观测数据，以做出决策 Deep Learning基于深度神经网络模型来拟合数据的机器学习系统 机器学习方法有监督学习 - supervised learning基于有人工标签的训练数据，进行模型训练的过程。通过标签，模型学习了输入-输出的映射关系。 无">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深度学习笔记.1-基础知识">
+<meta property="og:url" content="http://wingsfly.github.io/2024/11/07/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.html">
 <meta property="og:site_name" content="技术随记">
+<meta property="og:description" content="笔记  智能范畴Artificial Intelligence, AI各种模拟智能体行为的系统 Machine Learning基于数学模型来拟合观测数据，以做出决策 Deep Learning基于深度神经网络模型来拟合数据的机器学习系统 机器学习方法有监督学习 - supervised learning基于有人工标签的训练数据，进行模型训练的过程。通过标签，模型学习了输入-输出的映射关系。 无">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-11-07T06:30:24.000Z">
+<meta property="article:modified_time" content="2024-11-07T07:52:34.510Z">
 <meta property="article:author" content="wingsfly">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://wingsfly.github.io/">
+<link rel="canonical" href="http://wingsfly.github.io/2024/11/07/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>技术随记</title>
+  <title>深度学习笔记.1-基础知识 | 技术随记</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HZ12T7RNWY"></script>
     <script>
@@ -170,89 +174,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wingsfly.github.io/2024/11/07/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2-%E6%9C%89%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wingsfly">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="技术随记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/11/07/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2-%E6%9C%89%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">深度学习笔记.2-有监督学习</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-11-07 15:50:22 / 修改时间：15:59:22" itemprop="dateCreated datePublished" datetime="2024-11-07T15:50:22+08:00">2024-11-07</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="模型函数"><a href="#模型函数" class="headerlink" title="模型函数"></a>模型函数</h1><script type="math/tex; mode=display">y = f[x, \phi]</script><ul>
-<li>x：输入值</li>
-<li>y：模型输出结果</li>
-<li>$\phi$：模型参数</li>
-<li>训练集：提供了包含N组数据的训练数据对：$\{x_i, y_i\}，i=1..N$</li>
-<li>损失函数$L[\phi]$：模型函数作用在训练数据集$\{x_i\}$的结果，与训练样本中的$\{y_i\}$的差异度量，该差异随着模型参数$\phi$而变化，因此可以表达为$\phi$为自变量的损失函数$L[\phi]$</li>
-</ul>
-<h1 id="训练目标"><a href="#训练目标" class="headerlink" title="训练目标"></a>训练目标</h1><p>求解损失函数的最小值，以获得对应于该最小值的模型参数$\hat\phi$，公式中使用了最小方差来度量。</p>
-<script type="math/tex; mode=display">
-\begin{align}
-\hat{\phi} &= {argmin \atop {\phi}}\Big[L[\phi]\Big]\\
-&= {argmin \atop {\phi}}\bigg[\sum_{i=1}^I(f[x_i, \phi] - y_i)^2\bigg]
-\end{align}</script><p>通常使用梯度下降方法来迭代减少损失函数，即将$\phi$作为自变量，计算$\delta{L} \over \delta{\phi_j}$，并逐步将对应参数的梯度回归至0值。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -268,10 +193,9 @@
       <meta itemprop="name" content="技术随记">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/11/07/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-1-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="post-title-link" itemprop="url">深度学习笔记.1-基础知识</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          深度学习笔记.1-基础知识
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -304,7 +228,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <ul>
+        <ul>
 <li>笔记</li>
 </ul>
 <h1 id="智能范畴"><a href="#智能范畴" class="headerlink" title="智能范畴"></a>智能范畴</h1><h2 id="Artificial-Intelligence-AI"><a href="#Artificial-Intelligence-AI" class="headerlink" title="Artificial Intelligence, AI"></a>Artificial Intelligence, AI</h2><p>各种模拟智能体行为的系统</p>
@@ -321,184 +245,33 @@
 <h2 id="分类问题-Classification"><a href="#分类问题-Classification" class="headerlink" title="分类问题 - Classification"></a>分类问题 - Classification</h2><h2 id="二元分类问题-Binary-Classification"><a href="#二元分类问题-Binary-Classification" class="headerlink" title="二元分类问题 - Binary Classification"></a>二元分类问题 - Binary Classification</h2><p>将输入归纳于两个分类选项的一个</p>
 <h3 id="多元分类问题-Multiclass-Classification"><a href="#多元分类问题-Multiclass-Classification" class="headerlink" title="多元分类问题 - Multiclass Classification"></a>多元分类问题 - Multiclass Classification</h3><p>将输入归纳与多个分类选项中的其中一个</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wingsfly.github.io/2024/11/07/hexo-manual/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wingsfly">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="技术随记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/11/07/hexo-manual/" class="post-title-link" itemprop="url">hexo基础操作</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-11-07 11:27:34 / 修改时间：15:56:05" itemprop="dateCreated datePublished" datetime="2024-11-07T11:27:34+08:00">2024-11-07</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%BB%BA%E7%AB%99/" itemprop="url" rel="index"><span itemprop="name">WebSite</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>Hexo</li>
-<li>Blog</li>
-</ul>
-<h1 id="1-参考资源"><a href="#1-参考资源" class="headerlink" title="1. 参考资源"></a>1. 参考资源</h1><p>官方文档: <a target="_blank" rel="noopener" href="https://hexo.io/docs/">https://hexo.io/docs/</a></p>
-<h1 id="2-基础操作"><a href="#2-基础操作" class="headerlink" title="2. 基础操作"></a>2. 基础操作</h1><ul>
-<li>新建Blog<br><code>hexo new &quot;PostName&quot;</code></li>
-<li>生成页面<br><code>hexo g</code></li>
-<li>本地发布<br><code>hexo s</code></li>
-<li>发布到远端<br><code>hexo d</code></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://wingsfly.github.io/2024/08/15/Windows-Copilot-IP%E9%85%8D%E7%BD%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="wingsfly">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="技术随记">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/08/15/Windows-Copilot-IP%E9%85%8D%E7%BD%AE/" class="post-title-link" itemprop="url">Windows Copilot IP配置</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-08-15 09:47:14" itemprop="dateCreated datePublished" datetime="2024-08-15T09:47:14+08:00">2024-08-15</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-11-07 11:18:49" itemprop="dateModified" datetime="2024-11-07T11:18:49+08:00">2024-11-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="前置操作"><a href="#前置操作" class="headerlink" title="前置操作"></a>前置操作</h1><ul>
-<li>已将代理设置为”System Proxy”</li>
-<li>打开Copilot依然显示登录界面，且单击无应答</li>
-<li>推测还访问其他服务地址以检查计算机IP的归属地</li>
-</ul>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/08/15/Windows-Copilot-IP%E9%85%8D%E7%BD%AE/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024/11/07/hexo-manual/" rel="prev" title="hexo基础操作">
+      <i class="fa fa-chevron-left"></i> hexo基础操作
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2024/11/07/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-2-%E6%9C%89%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/" rel="next" title="深度学习笔记.2-有监督学习">
+      深度学习笔记.2-有监督学习 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -551,6 +324,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%99%BA%E8%83%BD%E8%8C%83%E7%95%B4"><span class="nav-number">1.</span> <span class="nav-text">智能范畴</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Artificial-Intelligence-AI"><span class="nav-number">1.1.</span> <span class="nav-text">Artificial Intelligence, AI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Machine-Learning"><span class="nav-number">1.1.1.</span> <span class="nav-text">Machine Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Deep-Learning"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">Deep Learning</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">机器学习方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0-supervised-learning"><span class="nav-number">2.1.</span> <span class="nav-text">有监督学习 - supervised learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0-unsupervised-learning"><span class="nav-number">2.2.</span> <span class="nav-text">无监督学习 - unsupervised learning</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E5%BC%8F%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0%E6%A8%A1%E5%9E%8B-generative-unsupervised-models"><span class="nav-number">2.2.1.</span> <span class="nav-text">生成式无监督学习模型 - generative unsupervised models</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%BD%9C%E5%9C%A8%E5%8F%98%E9%87%8F-latent-variable"><span class="nav-number">2.2.2.</span> <span class="nav-text">潜在变量 - latent variable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%81%94%E5%90%88%E7%9B%91%E7%9D%A3%E5%92%8C%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0"><span class="nav-number">2.2.3.</span> <span class="nav-text">联合监督和无监督学习</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0-reinforcement-learning"><span class="nav-number">2.3.</span> <span class="nav-text">强化学习 - reinforcement learning</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%B3%E7%AD%96%E7%B1%BB%E5%9E%8B"><span class="nav-number">3.</span> <span class="nav-text">决策类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9E%E5%BD%92%E9%97%AE%E9%A2%98-Regression"><span class="nav-number">3.1.</span> <span class="nav-text">回归问题 - Regression</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%85%83%E5%9B%9E%E5%BD%92%E9%97%AE%E9%A2%98-Multivariate-Regression"><span class="nav-number">3.1.1.</span> <span class="nav-text">多元回归问题 - Multivariate Regression</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98-Classification"><span class="nav-number">3.2.</span> <span class="nav-text">分类问题 - Classification</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%85%83%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98-Binary-Classification"><span class="nav-number">3.3.</span> <span class="nav-text">二元分类问题 - Binary Classification</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%9A%E5%85%83%E5%88%86%E7%B1%BB%E9%97%AE%E9%A2%98-Multiclass-Classification"><span class="nav-number">3.3.1.</span> <span class="nav-text">多元分类问题 - Multiclass Classification</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -663,59 +437,6 @@
   
 
   
-      
-
-<script>
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-    
 
   
 
